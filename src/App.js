@@ -2,9 +2,9 @@ import './App.css'
 
 function App() {
   return (
-<>
+< >
 <h1>PROGRESS CHART</h1>
-    <nav>
+    <nav />
         <input type="text" id="search" placeholder="search">
         <div class="drop-down-list">
             <button id="buttonSort" class="drop-down-list__button"><span>SORT BY</span> <span class="arrow-button arrow-bottom"></span> </button>
@@ -16,8 +16,8 @@ function App() {
                 </ul>
             </div>
         </div>
-    </nav>
-    <article id="noResults"><p>The search has not given any results <br> please clear the search</p></article>
+    <article id="noResults">
+      <p>The search has not given any results <br /> please clear the search</p></article>
     <section class="showcase-goods"></section>
 
     <section class="info-block">
@@ -35,14 +35,8 @@ function App() {
         </section>
 
 
-{/* <select>
-  <option value="1">one</option>
-  <option value="2">two</option>
-</select>
-<hr />
-<img src="/img/react.png" alt="react" title="react" /> */}
-</>
-    );
+< / >
+    ) 
 }
 
 export default App;
