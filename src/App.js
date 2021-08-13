@@ -2,7 +2,7 @@ import './App.css'
 
 function App() {
   return (
-< >
+<>
 <h1>PROGRESS CHART</h1>
     <nav />
         <input type="text" id="search" placeholder="search">
@@ -33,9 +33,7 @@ function App() {
                 <li>Adaptive layout.</li>
             </ol>
         </section>
-
-
-< / >
+< />
     ) 
 }
 
