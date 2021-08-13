@@ -1,7 +1,7 @@
 import './App.css'
 
 function App() {
-  return (
+  return ( 
 <>
 <h1>PROGRESS CHART</h1>
     <nav />
