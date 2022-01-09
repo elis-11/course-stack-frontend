@@ -78,10 +78,15 @@ const PageRegister = () => {
   };
 
   const handleEmailRegister2 = (e) => {
+<<<<<<< HEAD
     const _emailRegister2 = e.target.value;
     const mailformat = /^[a-z0-9_.-]{2,}@[a-z.]{2,}\.[a-z]{2,}$/gi;
     setEmailRegister2(_emailRegister2);
     (setEmail2IsValid(mailformat.test(_emailRegister2) && _emailRegister2 === emailRegister1));
+=======
+    const emailRegister2 = e.target.value;
+    setEmailRegister2(emailRegister2);
+>>>>>>> parent of b3ccce7... it works
   };
 
   const handlePasswordRegister1 = (e) => {
@@ -144,6 +149,7 @@ const PageRegister = () => {
         <form>
           <fieldset>
             <legend>Register</legend>
+<<<<<<< HEAD
 
             <NameValidation
               value={userNameRegister}
@@ -190,6 +196,80 @@ const PageRegister = () => {
               isValid={password2IsValid}
             />
 
+=======
+            <div></div>
+            <div className="row">
+              <label htmlFor="firstname">Name</label>
+              <input
+                type="text"
+                id="firstNameRegister"
+                value={firstNameRegister}
+                onChange={handleFirstNameRegister}
+                placeholder="Enter your firstname"
+              />
+            </div>
+            <div className="row">
+              <label htmlFor="secondname"></label>
+              <input
+                type="text"
+                id="secondNameRegister"
+                value={secondNameRegister}
+                onChange={handleSecondNameRegister}
+                placeholder="Enter your lastname"
+              />
+            </div>
+            <div className="row">
+              <label htmlFor="userName">Username</label>
+              <input
+                type="text"
+                id="username"
+                value={userNameRegister}
+                onChange={handleUserNameRegister}
+                placeholder="Enter your username *"
+              />
+            </div>
+
+            <div className="row">
+              <label htmlFor="emailRegister1">Email</label>
+              <input
+                type="text"
+                id="emailregister1"
+                value={emailRegister1}
+                onChange={handleEmailRegister1}
+                placeholder="Enter your email *"
+              />
+            </div>
+            <div className="row">
+              <label htmlFor="emailRegister2"></label>
+              <input
+                type="text"
+                id="emailregister2"
+                value={emailRegister2}
+                onChange={handleEmailRegister2}
+                placeholder="Enter your email again *"
+              />
+            </div>
+            <div className="row">
+              <label htmlFor="password">Password1</label>
+              <input
+                type="password"
+                id="passwordRegister1"
+                value={passwordRegister1}
+                onChange={handlePasswordRegister1}
+                placeholder="Enter your password *"
+              />
+            </div>
+            <div className="row">
+              <label htmlFor="password">Password2</label>
+              <input
+                type="password"
+                id="passwordRegister2"
+                value={passwordRegister2}
+                onChange={handlePasswordRegister2}
+                placeholder="Your password same like the first one *"
+              />
+            </div>
+>>>>>>> parent of b3ccce7... it works
             <div className="buttonRow">
               <button disabled={!formIsValid} onClick={handleRegisterButton}>
                 Register
