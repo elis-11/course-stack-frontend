@@ -3,7 +3,7 @@ import { useContext } from "react";
 import AppContext from "../AppContext";
 
 const Nav = () => {
-  const { currentUserIsInGroup } = useContext(AppContext);
+  const { currentUser, currentUserIsInGroup } = useContext(AppContext);
 
   return (
     <nav>
@@ -21,6 +21,12 @@ const Nav = () => {
             <NavLink to="/admin">Admin-Panel</NavLink>
           </li>
         )}
+        {currentUserIsInGroup("members") && (
+          <li>
+            <NavLink to="/todo">Taskmanager</NavLink>
+          </li>
+        )}
+
         {currentUserIsInGroup("loggedOutUsers") && (
           <li>
             <NavLink to="/login">Login</NavLink>
@@ -31,6 +37,9 @@ const Nav = () => {
             <NavLink to="/logout">Logout</NavLink>
           </li>
         )}
+        <li>
+          {currentUser.username && <h5>Hello {currentUser.username} </h5>}
+        </li>
       </ul>
     </nav>
   );

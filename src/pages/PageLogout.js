@@ -12,7 +12,7 @@ const PageLogout = () => {
       credentials: "include",
     };
     const response = await fetch(
-      "http://localhost:3003/logout",
+      `${process.env.REACT_APP_BACKEND_URL}/logout`,
       requestOptions
     );
     if (response.ok) {

@@ -1,9 +1,17 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import AppContext from "../AppContext.js";
+import { AiFillEyeInvisible } from "react-icons/ai";
+import { AiFillEye } from "react-icons/ai";
 
 const PageLogin = () => {
-  const { setCurrentUser, currentUserIsInGroup } = useContext(AppContext);
+  const {
+    setCurrentUser,
+    currentUserIsInGroup,
+    passwordInputType,
+    handleShowPasswordButtonRegister,
+  } = useContext(AppContext);
+
   const [loginFormMessage, setLoginFormMessage] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -27,7 +35,10 @@ const PageLogin = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
     };
-    const response = await fetch("http://localhost:3003/login", requestOptions);
+    const response = await fetch(
+      `${process.env.REACT_APP_BACKEND_URL}/login`,
+      requestOptions
+    );
     if (!response.ok) {
       setUsername("");
       setPassword("");
@@ -35,7 +46,6 @@ const PageLogin = () => {
     } else {
       const _currentUser = await response.json();
       setCurrentUser((prev) => ({ ...prev, ..._currentUser }));
-      console.log(_currentUser);
       navigate("/");
     }
   };
@@ -48,25 +58,38 @@ const PageLogin = () => {
             <legend>Login</legend>
             <div>{loginFormMessage}</div>
             <div className="row">
-              <label htmlFor="username">Name</label>
+              <label htmlFor="username">Username</label>
               <input
                 type="text"
                 id="username"
                 value={username}
                 onChange={handleUsername}
+                placeholder="Enter your username"
               />
             </div>
             <div className="row">
               <label htmlFor="password">Password</label>
               <input
-                type="password"
+                type={passwordInputType}
                 id="password"
                 onChange={handlePassword}
                 value={password}
+                placeholder="Enter your password"
               />
+              <div className="passwordIcon">
+                <span onClick={handleShowPasswordButtonRegister}>
+                  {passwordInputType === "password" ? (
+                    <AiFillEye />
+                  ) : (
+                    <AiFillEyeInvisible />
+                  )}
+                </span>
+              </div>
             </div>
             <div className="buttonRow">
-              <button type='submit' onClick={handleLoginButton}>Login</button>
+              <button type="submit" onClick={handleLoginButton}>
+                Login
+              </button>
             </div>
           </fieldset>
         </form>

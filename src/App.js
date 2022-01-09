@@ -1,3 +1,4 @@
+import dotenv from "dotenv";
 import { useEffect, useContext } from "react";
 import { Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav";
@@ -6,12 +7,17 @@ import PageRegister from "./pages/PageRegister";
 import PageLogin from "./pages/PageLogin";
 import PageLogout from "./pages/PageLogout";
 import PageAdmin from "./pages/PageAdmin";
+import PageToDo from "./pages/PageToDo";
 import AppContext from "./AppContext";
+import FadeIn from "react-fade-in";
 import "./App.scss";
 
+dotenv.config();
+const backend_env = process.env.REACT_APP_BACKEND_URL;
+
 function App() {
-  const { setCurrentUser, currentUser, currentUserIsInGroup } =
-    useContext(AppContext);
+  // const { setCurrentUser, currentUser, currentUserIsInGroup } =  useContext(AppContext);
+  const { setCurrentUser  } = useContext(AppContext);
 
   useEffect(() => {
     (async () => {
@@ -19,12 +25,11 @@ function App() {
         method: "GET",
         credentials: "include",
       };
-      const response = await fetch(
-        "http://localhost:3003/currentuser",
+      const URL = await fetch(`${backend_env}/currentuser`,
         requestOptions
       );
-      if (response.ok) {
-        const _currentUser = await response.json();
+      if (URL.ok) {
+        const _currentUser = await URL.json();
         setCurrentUser((prev) => ({ ...prev, ..._currentUser }));
       }
     })();
@@ -33,17 +38,22 @@ function App() {
   return (
     <div className="App">
       <div>
-        <div>
-          <h1>MERN Showcase App</h1>
-        </div>
-        <Nav />
-        <Routes>
-          <Route path="/" element={<PageWelcome />} />
-          <Route path="/register" element={<PageRegister />} />
-          <Route path="/admin" element={<PageAdmin />} />
-          <Route path="/login" element={<PageLogin />} />
-          <Route path="/logout" element={<PageLogout />} />
-        </Routes>
+        <FadeIn transitionDuration="2000">
+          {/* <ImSpinner6 /> */}
+
+          <div>
+            <h1>MERN Showcase App</h1>
+          </div>
+          <Nav />
+          <Routes>
+            <Route path="/" element={<PageWelcome />} />
+            <Route path="/register" element={<PageRegister />} />
+            <Route path="/admin" element={<PageAdmin />} />
+            <Route path="/login" element={<PageLogin />} />
+            <Route path="/logout" element={<PageLogout />} />
+            <Route path="/todo" element={<PageToDo />} />
+          </Routes>
+        </FadeIn>
       </div>
     </div>
   );

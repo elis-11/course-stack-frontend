@@ -2,8 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { AppProvider } from "./AppContext.js";
-import "./reset.scss";
-import "./index.css";
+import "./reset.css";
 import App from "./App";
 
 ReactDOM.render(

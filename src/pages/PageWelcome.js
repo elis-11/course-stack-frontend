@@ -2,7 +2,9 @@ import { useContext } from "react";
 import AppContext from "../AppContext";
 
 const PageWelcome = () => {
-  const { currentUser, currentUserIsInGroup } = useContext(AppContext);
+  const { currentUserIsInGroup } = useContext(AppContext);
+    const { currentUser} = useContext(AppContext);
+
   return (
     <div>
 
@@ -10,21 +12,16 @@ const PageWelcome = () => {
         {currentUserIsInGroup("loggedOutUsers") && (
           <div className="panel">Welcome to this site.</div>
         )}
-        {currentUser.username && (
-          <h2>
-            Current User: {currentUser.firstName} {currentUser.lastName}
-          </h2>
-        )}
 
         {currentUserIsInGroup("members") && (
           <div className="panel">
-            <h3>Current Site News for Members</h3>
+            <h3>{currentUser.firstName} {currentUser.lastName},</h3>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque
-              explicabo voluptate quia asperiores sit! Vel molestiae labore
-              ratione non dolores? Exercitationem soluta quo id laboriosam,
-              autem perferendis? Fuga, suscipit ipsa.
+              Welcome to our Members Club.
             </p>
+            <div className="news"><span>BRANDNEW: </span>
+            Taskmanager APP Beta Version 1.5 is online!!!!</div>
+           
           </div>
         )}
 
