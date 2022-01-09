@@ -3,21 +3,30 @@ import AppContext from "../AppContext.js";
 
 const PageAdmin = () => {
   const { currentUserIsInGroup } = useContext(AppContext);
-
   const [notYetApprovedUsers, setNotYetApprovedUsers] = useState([]);
-  const [loadAllUsers1, setLoadAllUsers] = useState([]);
+  const [showAllUsers, setShowAllUsers] = useState([]);
 
   useEffect(() => {
     (async () => {
       loadNotYetApprovedUsers();
-    })();
-  }, []);
-
-    useEffect(() => {
-    (async () => {
       loadAllUsers();
     })();
   }, []);
+
+  const loadAllUsers = async () => {
+    const requestOptions = {
+      method: "GET",
+      credentials: "include",
+    };
+    const response = await fetch(
+      `${process.env.REACT_APP_BACKEND_URL}/users`,
+      requestOptions
+    );
+    if (response.ok) {
+      const data = await response.json();
+      setShowAllUsers(data);
+    }
+  };
 
   const handle_approveUserButton = async (id) => {
     const requestOptions = {
@@ -27,7 +36,7 @@ const PageAdmin = () => {
       body: JSON.stringify({ id }),
     };
     const response = await fetch(
-      "http://localhost:3003/approveuser",
+      `${process.env.REACT_APP_BACKEND_URL}/approveuser`,
       requestOptions
     );
     if (response.ok) {
@@ -42,7 +51,7 @@ const PageAdmin = () => {
       credentials: "include",
     };
     const response = await fetch(
-      "http://localhost:3003/notyetapprovedusers",
+      `${process.env.REACT_APP_BACKEND_URL}/notyetapprovedusers`,
       requestOptions
     );
     if (response.ok) {
@@ -51,27 +60,19 @@ const PageAdmin = () => {
     }
   };
 
-  const loadAllUsers = async () => {
-    const requestOptions = {
-      method: "GET",
-      credentials: "include",
-    };
-    const response = await fetch("http://localhost:3003/username", requestOptions);
-    if (response.ok) {
-      const data = await response.json();
-      setLoadAllUsers((prev) => [...data.users]);
-    }
-  };
-
   const handle_deleteuser = async (id) => {
-    const response = await fetch("http://localhost:3003/deleteuser", {
-      method: "delete",
-      credentials: "include",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ id }),
-    });
+    const response = await fetch(
+      `${process.env.REACT_APP_BACKEND_URL}/deleteuser`,
+      {
+        method: "delete",
+        credentials: "include",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id }),
+      }
+    );
     if (response.ok) {
       loadNotYetApprovedUsers();
+      loadAllUsers();
     }
   };
 
@@ -81,7 +82,6 @@ const PageAdmin = () => {
         <div className="panel">
           <h3>Content Editor Section:</h3>
           ShowAllUsers:
-           <h4>{loadAllUsers.length} Users</h4>
           <div>
             <button>Edit Welcome Page</button>
           </div>
@@ -117,6 +117,41 @@ const PageAdmin = () => {
                       >
                         Approve
                       </button>
+                      <div>
+                        <button onClick={() => handle_deleteuser(user._id)}>
+                          Delete users
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+          <h4>{showAllUsers.length} Users</h4>
+          <table className="minimalListBlack">
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>accessGroups</th>
+                <th>Created</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {showAllUsers.map((user, index) => {
+                return (
+                  <tr key={index}>
+                    <td>{user.firstName}</td>
+                    <td>{user.lastName}</td>
+                    <td>{user.username}</td>
+                    <td>{user.email}</td>
+                    <td>{user.accessGroups}</td>
+                    <td>{user.createdAt}</td>
+                    <td>
                       <div>
                         <button onClick={() => handle_deleteuser(user._id)}>
                           Delete users

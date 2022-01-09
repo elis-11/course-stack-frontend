@@ -10,7 +10,7 @@ const PageRegister = () => {
   const [firstNameRegister, setFirstNameRegister] = useState("");
   const [secondNameRegister, setSecondNameRegister] = useState("");
   const [emailRegister1, setEmailRegister1] = useState("");
-  const [emailRegister2, setEmailRegister2] = useState("");
+  // const [emailRegister2, setEmailRegister2] = useState("");
   const [passwordRegister1, setPasswordRegister1] = useState("");
   const [passwordRegister2, setPasswordRegister2] = useState("");
 
@@ -32,10 +32,10 @@ const PageRegister = () => {
     setEmailRegister1(emailRegister1);
   };
 
-  const handleEmailRegister2 = (e) => {
-    const emailRegister2 = e.target.value;
-    setEmailRegister2(emailRegister2);
-  };
+  // const handleEmailRegister2 = (e) => {
+  //   const emailRegister2 = e.target.value;
+  //   setEmailRegister2(emailRegister2);
+  // };
 
   const handlePasswordRegister1 = (e) => {
     const passwordRegister1 = e.target.value;
@@ -59,7 +59,7 @@ const PageRegister = () => {
           firstName: firstNameRegister,
           lastName: secondNameRegister,
           email1: emailRegister1,
-          email2: emailRegister2,
+          // email2: emailRegister2,
           password1: passwordRegister1,
           password2: passwordRegister2,
         },
@@ -77,7 +77,7 @@ const PageRegister = () => {
       setFirstNameRegister("");
       setSecondNameRegister("");
       setEmailRegister1("");
-      setEmailRegister2("");
+      // setEmailRegister2("");
       setPasswordRegister1("");
       setPasswordRegister2("");
       navigate("/");
@@ -102,7 +102,7 @@ const PageRegister = () => {
               />
             </div>
             <div className="row">
-              <label htmlFor="secondname"></label>
+              <label htmlFor="secondname">Lastname</label>
               <input
                 type="text"
                 id="secondNameRegister"
@@ -132,8 +132,8 @@ const PageRegister = () => {
                 placeholder="Enter your email *"
               />
             </div>
-            <div className="row">
-              <label htmlFor="emailRegister2"></label>
+            {/* <div className="row">
+              <label htmlFor="emailRegister2">Email</label>
               <input
                 type="text"
                 id="emailregister2"
@@ -141,7 +141,7 @@ const PageRegister = () => {
                 onChange={handleEmailRegister2}
                 placeholder="Enter your email again *"
               />
-            </div>
+            </div> */}
             <div className="row">
               <label htmlFor="password">Password1</label>
               <input
