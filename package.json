@@ -1,12 +1,11 @@
 {
-  "name": "online-shop-backend",
+  "name": "online-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "npx nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx nodemon server.js"
   },
   "repository": {
     "type": "git",
