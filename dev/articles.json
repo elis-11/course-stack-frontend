@@ -1,0 +1,211 @@
+[
+  {
+    "gender": "men",
+    "imageDescription": "Men Alloner Print Shirt",
+    "imageURL": "/images/PHOTO-2021-10-11-23-07-49.jpg",
+    "thePrice": "17,00 $ "
+  },
+
+  {
+    "gender": "childern",
+    "imageDescription": "Toddler Boys Dinsaur Print Raglan Sleeve Pullover",
+    "imageURL": "/images/PHOTO-2021-10-12-12-24-49.jpg",
+    "thePrice": "13,00 $"
+  },
+
+  {
+    "gender": "childern",
+    "imageDescription": "Toddler Girls Checker Print Mesh Hem Belted Dress",
+    "imageURL": "/images/PHOTO-2021-10-12-12-23-53.jpg",
+    "thePrice": " 16,00 $"
+  },
+
+  {
+    "gender": "childern",
+    "imageDescription": "Toddler Boys Kangaroo Pocket Hoodie",
+    "imageURL": "/images/PHOTO-2021-10-12-12-24-17.jpg",
+    "thePrice": " 16,00 $"
+  },
+
+  {
+    "gender": "childern",
+    "imageDescription": "Toddler Girls Plaid Panel Peter-Pan Collar Teddy Dress With Bag",
+    "imageURL": "/images/PHOTO-2021-10-12-12-23-31.jpg",
+    "thePrice": " 19,99 $"
+  },
+
+  {
+    "gender": "childern",
+    "imageDescription": "Toddler Girls Buffalo Plaid Bow Front Ruffle Trim Dress",
+    "imageURL": "/images/PHOTO-2021-10-12-12-19-56.jpg",
+    "thePrice": " 17,00 $"
+  },
+
+  {
+    "gender": "childern",
+    "imageDescription": "Baby Christmas Print Jumpsuit With Hat",
+    "imageURL": "/images/PHOTO-2021-10-12-00-22-17.jpg",
+    "thePrice": "10,00 $ "
+  },
+
+  {
+    "gender": "childern",
+    "imageDescription": "Baby Cartoon Embroidery Color Block Jumsuit With Hat",
+    "imageURL": "/images/PHOTO-2021-10-12-00-21-18.jpg",
+    "thePrice": " 14,99 $"
+  },
+
+  {
+    "gender": "childern",
+    "imageDescription": "Peninsula Baby Cartoon & Letter Graphic Color Block Thermal Jumpsuit Without Headband",
+    "imageURL": "/images/PHOTO-2021-10-12-00-20-46.jpg",
+    "thePrice": " 27,00 $"
+  },
+
+  {
+    "gender": "childern",
+    "imageDescription": "Baby Boy Cartoon Dinosaur Hooded Jumpsuit",
+    "imageURL": "/images/PHOTO-2021-10-12-00-20-26.jpg",
+    "thePrice": " 16,00 $"
+  },
+
+  {
+    "gender": "childern",
+    "imageDescription": "Yierying Baby Unisex Fox Embroidery Button Front Jumpsuit With Bib",
+    "imageURL": "/images/PHOTO-2021-10-12-00-19-56.jpg",
+    "thePrice": " 18,00 $"
+  },
+
+  {
+    "gender": "women",
+    "imageDescription": " Sleeve Mock Neck Lace Dress",
+    "imageURL": "/images/PHOTO-2021-10-11-23-28-43.jpg",
+    "thePrice": "25,00 $ "
+  },
+
+  {
+    "gender": "women",
+    "imageDescription": "Mock Neck Split Back Belted Lace Dress",
+    "imageURL": "/images/PHOTO-2021-10-11-23-28-01.jpg",
+    "thePrice": " 27,00 $"
+  },
+
+  {
+    "gender": "women",
+    "imageDescription": "Solid Velvet Fitted Dress",
+    "imageURL": "/images/PHOTO-2021-10-11-23-26-57.jpg",
+    "thePrice": " 24,00 $"
+  },
+
+  {
+    "gender": "women",
+    "imageDescription": "Letter Graphic Drop Shoulder Sweatshirt With Joggers",
+    "imageURL": "/images/PHOTO-2021-10-11-23-26-30.jpg",
+    "thePrice": " 15,99 $"
+  },
+
+  {
+    "gender": "women",
+    "imageDescription": "Floral Print Dip Hem Top",
+    "imageURL": "/images/PHOTO-2021-10-11-23-25-30.jpg",
+    "thePrice": "13, 99 $ "
+  },
+
+  {
+    "gender": "women",
+    "imageDescription": "Floral Print v Neck Bell Sleeve Longline Blouse",
+    "imageURL": "/images/PHOTO-2021-10-11-23-24-47.jpg",
+    "thePrice": " 15,00 $"
+  },
+
+  {
+    "gender": "women",
+    "imageDescription": "Bishop Seelve Asymmentrical Hem Top",
+    "imageURL": "/images/PHOTO-2021-10-11-23-23-58.jpg",
+    "thePrice": " 23,00 $"
+  },
+
+  {
+    "gender": "women",
+    "imageDescription": "Plunging Neck Lantern Sleeve High Low Hem Top",
+    "imageURL": "/images/PHOTO-2021-10-11-23-23-33.jpg",
+    "thePrice": "20,00 $ "
+  },
+
+  {
+    "gender": "women",
+    "imageDescription": "Single Breasted Belted Blouse",
+    "imageURL": "/images/PHOTO-2021-10-11-23-22-46.jpg",
+    "thePrice": "11,99 $ "
+  },
+
+  {
+    "gender": "women",
+    "imageDescription": "Self Belted Split Hem Longline Top",
+    "imageURL": "/images/PHOTO-2021-10-11-23-21-36.jpg",
+    "thePrice": "21,00 $ "
+  },
+
+  {
+    "gender": "men",
+    "imageDescription": "Men Flannel Long Sleeve PJ Set",
+    "imageURL": "/images/PHOTO-2021-10-12-12-50-20.jpg",
+    "thePrice": " 24,00 $"
+  },
+
+  {
+    "gender": "men",
+    "imageDescription": "Men Slogan And Antler Embtoidered Velvet Pullover & Joggers Lounge Set",
+    "imageURL": "/images/PHOTO-2021-10-12-12-50-04.jpg",
+    "thePrice": "31,00 $ "
+  },
+
+  {
+    "gender": "men",
+    "imageDescription": "Men Greek Tape Panel Betted Teddy Hooded Robe",
+    "imageURL": "/images/PHOTO-2021-10-12-12-40-03.jpg",
+    "thePrice": " 37,00 $"
+  },
+
+  {
+    "gender": "men",
+    "imageDescription": "Men Flap Drawstring Waist Shorts",
+    "imageURL": "/images/PHOTO-2021-10-12-12-39-44.jpg",
+    "thePrice": " 21,00 $"
+  },
+
+  {
+    "gender": "men",
+    "imageDescription": "Men Grid Print Hidden Pocket Pants",
+    "imageURL": "/images/PHOTO-2021-10-12-12-39-26.jpg",
+    "thePrice": "21,00 $ "
+  },
+
+  {
+    "gender": "men",
+    "imageDescription": "Men Letter Graphic Contrast Panel Drawstring Waist Sweatpants",
+    "imageURL": "/images/PHOTO-2021-10-12-12-39-03.jpg",
+    "thePrice": " 21,00 $ "
+  },
+
+  {
+    "gender": "men",
+    "imageDescription": "Men Plaid Cartoon And Slogan Graphic Button Throught Shirt",
+    "imageURL": "/images/PHOTO-2021-10-11-23-08-53.jpg",
+    "thePrice": "6,00 $ "
+  },
+
+  {
+    "gender": "men",
+    "imageDescription": "Men Graphic Button Throught Shirt",
+    "imageURL": "/images/PHOTO-2021-10-11-23-06-22.jpg",
+    "thePrice": "18,99 $"
+  },
+
+  {
+    "gender": "men",
+    "imageDescription": "Men Pinstripe Decor poket & Tapered Pants",
+    "imageURL": "/images/PHOTO-2021-10-11-23-02-40.jpg",
+    "thePrice": " 64,00 $"
+  }
+]
